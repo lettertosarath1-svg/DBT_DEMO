@@ -9,7 +9,7 @@ WITH CTE AS (
    {{ season_of_year('STARTED_AT') }} AS STATION_OF_YEAR
     
     FROM
-    {{ source('DEMO', 'bike') }}
+    {{ ref('stg_bike') }}
     WHERE STARTED_AT != 'started_at'
 
 )
